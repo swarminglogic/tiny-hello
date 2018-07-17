@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Create /wwww directory
+mkdir -p /www
+
 # Generate (initially)
 /server/gen-index-html.sh
 

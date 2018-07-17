@@ -14,7 +14,15 @@ Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-w
 2. Direct to `index.html` as default
 3. Remove directory listing functionality
 
-## Build
+## Build docker image
+
+Everything should be ready from the initial repostory clone.
+
+    docker build .
+
+## Build `tiny` webserver
+
+A pre-compiled version is already provided in `server` folder. These notes are if you wish to build it yourself.
 
 Initialize the submodule:
 
