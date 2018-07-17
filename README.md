@@ -6,7 +6,7 @@ Is based on a minimal web-server implementation [found here](https://github.com/
 
 Inspired by [tutum/hello-world](https://hub.docker.com/r/tutum/hello-world/)
 
-Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-web-server`](https://github.com/shenfeng/tiny-web-server) built to run on `busybox`, for a grand total of `1.92 MiB`, a `93.5%` size reduction.
+Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-web-server`](https://github.com/swarminglogic/tiny-web-server) built to run on `busybox`, for a grand total of `1.92 MiB`, a `93.5%` size reduction.
 
 ### Changes to [`tiny-web-server`](https://github.com/shenfeng/tiny-web-server):
 
@@ -37,7 +37,7 @@ This requires c99 with the ability to compile 32bit executables.
 
 This hosts a static page with `hostname` information, as well as listing certain environment variables used by k8s matching regex `^(.*)_PORT_([0-9]*)_(TCP|UDP)`.
 
-To mitigate this, a cron-job is installed, that recreates the `index.html` once every minute. Takes order of 2ms to execute.
+To mitigate this, a cron-job is installed that recreates the `index.html` once every minute. Takes order of 2ms to execute.
 
 ## TODOs
 
