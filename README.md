@@ -10,7 +10,7 @@ Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-w
 
 ### Changes to [`tiny-web-server`](https://github.com/shenfeng/tiny-web-server):
 
-1. Build targetting 32-bit architecture for busybox
+1. Build static executable for busybox
 2. Direct to `index.html` as default
 3. Remove directory listing functionality
 
