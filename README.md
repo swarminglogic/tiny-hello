@@ -5,11 +5,15 @@ Inspired by [`tutum/hello-world`](https://hub.docker.com/r/tutum/hello-world/), 
 
 # Example usage
 
-docker run -d -p :80 swalog/tiny-hello
+`docker run -d -p 8190:80 swalog/tiny-hello`
+
+`curl localhost:8190`
+
+`curl localhost:8190/nweb.log`
 
 # Server log files
 
-These are available through he container log output, as well as the endpoint at `<yourservice>/nweb.log`
+These are available through he container log output, as well as the endpoint at `<yourservice>/nweb.log` hosted by the container.
 
 # Built using:
 
