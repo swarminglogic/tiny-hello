@@ -20,7 +20,7 @@ Everything should be ready from the initial repostory clone.
 
     docker build .
 
-## Build `tiny` webserver
+## Build `nweb` webserver
 
 A pre-compiled version is already provided in `server` folder. These notes are if you wish to build it yourself.
 
@@ -29,9 +29,9 @@ Initialize the submodule:
     git submodule init
     git submodule update
 
-Run `build-tiny.sh`, this generates the compiled tiny-web-server.
+Run `build-nweb.sh`, this generates the compiled tiny-web-server.
 
-This requires c99 with the ability to compile 32bit executables.
+This requires c99
 
 ## Caveats
 

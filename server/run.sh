@@ -12,4 +12,5 @@ echo "* * * * * /server/gen-index-html.sh" > /var/spool/cron/crontabs/root
 crond
 
 # Start tiny web server
-/server/tiny /www 80
+/server/nweb 80 /www
+tail -f /dev/null

@@ -1,3 +1,3 @@
-[submodule "tiny-web-server"]
-	path = tiny-web-server
-	url = https://github.com/swarminglogic/tiny-web-server
+[submodule "nweb"]
+	path = nweb
+	url = https://github.com/swarminglogic/nweb
