@@ -2,17 +2,15 @@
 
 Tiny docker image providing a web-server test
 
-Is based on a minimal web-server implementation [shefeng/tiny-web-server](https://github.com/shenfeng/tiny-web-server)
+Is based on a minimal web-server implementation [ankushagarwal/nweb](https://github.com/ankushagarwal/nweb)
 
 Inspired by docker image [tutum/hello-world](https://hub.docker.com/r/tutum/hello-world/)
 
-Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-web-server`](https://github.com/swarminglogic/tiny-web-server) built to run on `busybox`, for a grand total of `1.92 MiB`, a `93.5%` size reduction.
+Instead of building on top of `alpine`, and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) built to run on `busybox`, for a grand total of `1.92 MiB`, a `93.5%` size reduction.
 
-### Changes to [`tiny-web-server`](https://github.com/shenfeng/tiny-web-server):
+### Changes to [`nweb`](https://github.com/swarminglogic/nweb):
 
-1. Build static executable for busybox
-2. Direct to `index.html` as default
-3. Remove directory listing functionality
+1. Allows serving `.log` files (useful for debugging)
 
 ## Build docker image
 
@@ -29,9 +27,8 @@ Initialize the submodule:
     git submodule init
     git submodule update
 
-Run `build-nweb.sh`, this generates the compiled tiny-web-server.
+Run `build-nweb.sh`, this generates the compiled `nweb` server
 
-This requires c99
 
 ## Caveats
 
@@ -41,6 +38,5 @@ To mitigate this, a cron-job is installed that recreates the `index.html` once e
 
 ## TODOs
 
- - Compile `tiny` using a docker container
- - Consider modifying `tiny` to generate webpage at reqest time
-
+ - Compile `nweb` using a docker container
+ - Consider modifying `nweb` to generate webpage at reqest time
