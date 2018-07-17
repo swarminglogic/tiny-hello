@@ -34,12 +34,9 @@ Docker image is also automatically built on dockerhub: https://hub.docker.com/r/
 
 A pre-compiled version is already provided in `server` folder. These notes are if you wish to build it yourself.
 
-Initialize the submodule:
+Initialize the submodule: `git submodule init && git submodule update`
 
-    git submodule init
-    git submodule update
-
-Run `build-nweb.sh`, this generates the compiled `nweb` server
+Run `./build-nweb.sh`, this generates the compiled `nweb` server
 
 
 # Caveats
