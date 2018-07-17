@@ -11,6 +11,9 @@ mkdir -p /var/spool/cron/crontabs
 echo "* * * * * /server/gen-index-html.sh" > /var/spool/cron/crontabs/root
 crond
 
+tar xf /server/nweb.tar.gz -C /server/
+rm /server/nweb.tar.gz
+
 # Start tiny web server
 /server/nweb 80 /www
 tail -f /dev/null
