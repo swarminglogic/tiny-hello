@@ -1,7 +1,7 @@
 # Main feature:
 Tiny docker image providing a web-server test
 
-Inspired by [`tutum/hello-world`](https://hub.docker.com/r/tutum/hello-world/), however, instead of building on top of `alpine` and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) by Nigel Grffith, built to run on `busybox`, for a grand total of `1.52 MiB`, a `91.5%` size reduction.
+Inspired by [`tutum/hello-world`](https://hub.docker.com/r/tutum/hello-world/), however, instead of building on top of `alpine` and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) by Nigel Griffith, built to run on `busybox`, for a grand total of `1.52 MiB`, a `91.5%` size reduction.
 
 # Example usage
 
