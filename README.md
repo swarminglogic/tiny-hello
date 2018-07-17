@@ -6,11 +6,13 @@ Is based on a minimal web-server implementation [ankushagarwal/nweb](https://git
 
 Inspired by docker image [tutum/hello-world](https://hub.docker.com/r/tutum/hello-world/)
 
-Instead of building on top of `alpine`, and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) built to run on `busybox`, for a grand total of `1.92 MiB`, a `93.5%` size reduction.
+Instead of building on top of `alpine`, and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) built to run on `busybox`, for a grand total of `1.52 MiB`, a `91.5%` size reduction.
 
 ### Changes to [`nweb`](https://github.com/swarminglogic/nweb):
 
-1. Allows serving `.log` files (useful for debugging)
+1. Allow serving `.log` files (useful for debugging)
+
+Hit `<endpoint>/nweb.log` to request it from server
 
 ## Build docker image
 

@@ -16,4 +16,4 @@ rm /server/nweb.tar.gz
 
 # Start tiny web server
 /server/nweb 80 /www
-tail -f /dev/null
+tail -f /www/nweb.log
