@@ -20,6 +20,8 @@ Everything should be ready from the initial repostory clone.
 
     docker build .
 
+Docker image is also available on dockerhub: https://hub.docker.com/r/swalog/tiny-hello/
+
 ## Build `nweb` webserver
 
 A pre-compiled version is already provided in `server` folder. These notes are if you wish to build it yourself.
