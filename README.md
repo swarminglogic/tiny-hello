@@ -16,6 +16,11 @@ Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-w
 
 ## Build
 
+Initialize the submodule:
+
+    git submodule init
+    git submodule update
+
 Run `build-tiny.sh`, this generates the compiled tiny-web-server.
 
 This requires c99 with the ability to compile 32bit executables.
