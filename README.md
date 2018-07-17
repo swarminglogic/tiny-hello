@@ -2,9 +2,9 @@
 
 Tiny docker image providing a web-server test
 
-Is based on a minimal web-server implementation [found here](https://github.com/shenfeng/tiny-web-server)
+Is based on a minimal web-server implementation [shefeng/tiny-web-server](https://github.com/shenfeng/tiny-web-server)
 
-Inspired by [tutum/hello-world](https://hub.docker.com/r/tutum/hello-world/)
+Inspired by docker image [tutum/hello-world](https://hub.docker.com/r/tutum/hello-world/)
 
 Instead of building on top of `alpine`, and `php`, this uses a modified [`tiny-web-server`](https://github.com/swarminglogic/tiny-web-server) built to run on `busybox`, for a grand total of `1.92 MiB`, a `93.5%` size reduction.
 
