@@ -1,8 +1,7 @@
 #!/bin/sh
 
 LINKS_BODY=""
-LINKS=$(env | sed -n -r 's,^(.*)_PORT_([0-9]*)_(TCP|UDP)=(.*),<b>\1</b> listening in \2 available at \4<br/>,p')
-LINKS=$(env | sed -n -r 's,^(.*)_PORT_([0-9]*)_(TCP|UDP)=(.*),<tr><td>\1</td><td>\2</td><td>\3</td><td>\4</td></tr>,p')
+LINKS=$(env | sort | sed -n -r 's,^(.*)_PORT_([0-9]*)_(TCP|UDP)=(.*),<tr><td>\1</td><td>\2</td><td>\3</td><td>\4</td></tr>,p')
 if [ ! -z "$LINKS" ] ; then
 	LINKS_BODY="<br/><h3>Links found:</h3><table><tr><th>Service</th><th>port</th><th>protocol</th><th>target</th></tr>${LINKS}</tabl>"
 fi
