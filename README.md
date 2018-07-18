@@ -1,3 +1,7 @@
+[![Docker Automated build](https://img.shields.io/docker/automated/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello/)
+[![Docker Build Status](https://img.shields.io/docker/build/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello/)
+[![MicroBadger Size](https://img.shields.io/microbadger/image-size/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello)
+
 # Main feature:
 Tiny docker image providing a web-server test, which adds ONLY 18.5 kb on top of busybox.
 
