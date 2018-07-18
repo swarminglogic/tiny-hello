@@ -4,11 +4,11 @@
 mkdir -p /www
 
 # Generate (initially)
-/server/gen-index-html.sh
+/server/gen-index-html.sh /www/index.html
 
 # Install gen-index-html as cron-job to run every minute
 mkdir -p /var/spool/cron/crontabs
-echo "* * * * * /server/gen-index-html.sh" > /var/spool/cron/crontabs/root
+echo "* * * * * /server/gen-index-html.sh /www/index.html" > /var/spool/cron/crontabs/root
 crond
 
 tar xf /server/nweb.tar.gz -C /server/
