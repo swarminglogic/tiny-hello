@@ -1,5 +1,5 @@
-[![Docker Automated build](https://img.shields.io/docker/automated/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello/)
-[![Docker Build Status](https://img.shields.io/docker/build/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello/)
+[![Docker Automated build](https://img.shields.io/docker/automated/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello/builds/)
+[![Docker Build Status](https://img.shields.io/docker/build/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello/builds/)
 [![MicroBadger Size](https://img.shields.io/microbadger/image-size/swalog/tiny-hello.svg?style=for-the-badge)](https://hub.docker.com/r/swalog/tiny-hello)
 
 # Main feature:
