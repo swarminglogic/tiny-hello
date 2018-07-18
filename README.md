@@ -1,7 +1,12 @@
 # Main feature:
-Tiny docker image providing a web-server test
+Tiny docker image providing a web-server test, which adds ONLY 18.5 kb on top of busybox.
 
-Inspired by [`tutum/hello-world`](https://hub.docker.com/r/tutum/hello-world/), however, instead of building on top of `alpine` and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) by Nigel Griffith, built to run on `busybox`, for a grand total of `1.52 MiB`, a `91.5%` size reduction.
+ - `busybox` base, i.e. usable linux box w/tools
+ - `nweb` http-webserver
+ - Cronjob that updates landing-page with debug information
+ - Access to web-server log at `<SERVER>/nweb.log`
+
+Inspired by [`tutum/hello-world`](https://hub.docker.com/r/tutum/hello-world/), however, instead of building on top of `alpine` and `php`, this uses a modified [`nweb`](https://github.com/swarminglogic/nweb) by Nigel Griffith, built to run on `busybox`, adding only a `18.5 kB` layer, for a grand total of `1.18 MiB`, a `93.4%` size reduction.
 
 # Example usage
 
@@ -42,6 +47,14 @@ Initialize the submodule: `git submodule init && git submodule update`
 
 Run `./build-nweb.sh`, this generates the compiled `nweb` server
 
+Note: This requires several tools:
+
+- `musl-gcc` (`musl-tools` package)
+- `strip` (`binutils` package)
+- `sstrip` (from `elfkickers`, [website](http://www.muppetlabs.com/~breadbox/software/elfkickers.html))
+- `upx` (`upx-ucl` package)
+
+All of these binary size reduction methods have been copied from [sseemayer/mini-helloworld-httpd](https://github.com/sseemayer/mini-helloworld-httpd). Thanks!
 
 # Caveats
 
