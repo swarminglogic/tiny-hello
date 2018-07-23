@@ -1,9 +1,5 @@
 #!/bin/bash
 
-ROOT_DIR=$(git rev-parse --show-toplevel)
-
-pushd ${ROOT_DIR} &>/dev/null
-
 musl-gcc -Os --static -s -fno-stack-protector -ffunction-sections -fdata-sections \
     -Wl,--gc-sections nweb/nweb23.c -o server/nweb
 strip -S --strip-unneeded --remove-section=.note.gnu.gold-version \
@@ -15,5 +11,3 @@ upx server/nweb
 
 tar -zcvf server/nweb.tar.gz -C server nweb
 rm server/nweb
-
-popd &>/dev/null

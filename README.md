@@ -68,5 +68,5 @@ To mitigate this, a cron-job is installed that recreates the `index.html` once e
 
 # TODOs
 
- - Compile `nweb` using a docker container
+ - ~~Compile `nweb` using a docker container~~
  - Consider modifying `nweb` to generate webpage at reqest time
