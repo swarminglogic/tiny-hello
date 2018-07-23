@@ -38,20 +38,23 @@ Hit `<endpoint>/nweb.log` to request it from server
 
 # Building docker image
 
-Everything should be ready to build from the initial repostory clone.
+
+Everything should be ready to build from the initial repostory clone, after initializing submodules:
+
+`git submodule init && git submodule update`
 
 Docker image is also automatically built on dockerhub: https://hub.docker.com/r/swalog/tiny-hello/
 
 
 # How-to: Rebuilding `nweb` webserver
 
-A pre-compiled version is already provided in `server` folder. These notes are if you wish to build it yourself.
+Dockerfile handles building the webserver executable in a multi-build stage.
 
-Initialize the submodule: `git submodule init && git submodule update`
+Additionally  a pre-compiled version provided in `server` folder. Read on if you want to build it locally, on your own machine.
 
 Run `./build-nweb.sh`, this generates the compiled `nweb` server
 
-Note: This requires several tools:
+This requires several tools:
 
 - `musl-gcc` (`musl-tools` package)
 - `strip` (`binutils` package)
@@ -68,5 +71,4 @@ To mitigate this, a cron-job is installed that recreates the `index.html` once e
 
 # TODOs
 
- - ~~Compile `nweb` using a docker container~~
  - Consider modifying `nweb` to generate webpage at reqest time
